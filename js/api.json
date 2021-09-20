@@ -1,0 +1,38 @@
+[
+    {
+      "precio": 500,
+      "id": 1,
+      "title": "Gasteria",
+      "thumbnailUrl": "../media/sucuVenta3.jpg"
+    },
+    {
+      "precio": 350,
+      "id": 2,
+      "title": "Dudleya",
+      "thumbnailUrl": "../media/sucuVenta4.jpg"
+    },
+    {
+      "precio": 400,
+      "id": 3,
+      "title": "Aeonium",
+      "thumbnailUrl": "../media/sucuVenta5.jpg"
+    },
+    {
+      "precio": 350,
+      "id": 4,
+      "title": "Echeveria",
+      "thumbnailUrl": "../media/sucuVenta6.jpg"
+    },
+    {
+      "precio": 410,
+      "id": 5,
+      "title": "Kalanchoe",
+      "thumbnailUrl": "../media/sucuVenta7.jpg"
+    },
+    {
+      "precio": 450,
+      "id": 6,
+      "title": "Stapelia",
+      "thumbnailUrl": "../media/sucuVenta8.jpg"
+    }
+  ]

@@ -1,0 +1,530 @@
+/*quitamos los margenes de nuestra pagina, y asignamos una fuente por defecto*/
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; }
+
+/*seccion donde definimos la estructura de la pagina de inicio */
+.fondoPrincipal {
+  background-image: url(../media/sucuFondoPri1.jpg);
+  background-repeat: none;
+  height: 100vh;
+  /*cambiaremos la imagen de fondo dependiendo el ancho de la pantalla*/ }
+  .fondoPrincipal .fondoPrincipal__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 80vh; }
+    .fondoPrincipal .fondoPrincipal__menu .fondo__boton {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer; }
+    .fondoPrincipal .fondoPrincipal__menu h1 {
+      font-family: "Merienda", sans-serif;
+      padding-bottom: 1%; }
+    .fondoPrincipal .fondoPrincipal__menu h2 {
+      font-family: "Merienda", sans-serif;
+      color: #c3d27c; }
+    @media all and (max-width: 768px) {
+      .fondoPrincipal .fondoPrincipal__menu {
+        padding-bottom: 30%; } }
+  @media all and (max-width: 1370px) {
+    .fondoPrincipal {
+      background-image: url(../media/sucuFondoPri11.jpg);
+      background-repeat: none; } }
+  @media all and (max-width: 768px) {
+    .fondoPrincipal {
+      background-image: url(../media/fondoInicio2.jpg);
+      background-repeat: none; } }
+  @media all and (max-width: 550px) {
+    .fondoPrincipal {
+      background-image: url(../media/fondoInicio2.jpg);
+      background-repeat: none; } }
+  @media all and (max-width: 768px) {
+    .fondoPrincipal .fondoPrincipal__botones {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+
+/*clase predefinida de botones*/
+.button {
+  background-color: #a9ba5a;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer; }
+
+.button1 {
+  background-color: white;
+  border-radius: 24px;
+  color: black;
+  transition-duration: 0.3s;
+  border: 2px solid #a9ba5a;
+  width: 14rem; }
+
+.button1:hover {
+  background-color: #a9ba5a;
+  color: white;
+  transform: scale(1.1); }
+
+.button2 {
+  background-color: #f7efe5;
+  border-radius: 6px;
+  color: black;
+  font-size: 18px;
+  transition-duration: 0.3s; }
+
+.button2:hover {
+  background-color: #a9ba5a;
+  color: white;
+  transform: scale(1.07); }
+
+.button3 {
+  background-color: #a9ba5a;
+  border-radius: 12px;
+  color: black;
+  font-size: 20px;
+  transition-duration: 0.3s; }
+
+.button3:hover {
+  color: white;
+  transform: scale(1.08); }
+
+.buttonClose:hover {
+  background-color: #DB3232; }
+
+.dropdown-item {
+  transition-duration: 0.3s; }
+
+.dropdown-item:hover {
+  border-bottom: 7px groove #a9ba5a; }
+
+/*Le damos estilo a nuestro header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background-color: #a9ba5a;
+  z-index: 10; }
+  
+#carrito{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+#carrito img{
+  justify-content: center;
+  width: 3rem;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+#carrito img:hover {
+  transform: scale(1.3); }
+.modal-container-carrito{
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+  align-items:flex-start;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-in;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#modal-carrito{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 8%;
+  height: 30%;
+  width: 40%;
+  background-color: white;
+  border-radius: 10px;
+}
+.modal-content{
+  height: 89%;
+}
+
+.modal-active{
+  opacity: 1;
+  visibility: visible;
+}
+  
+.loguito{
+  width: 10%;
+}
+.logo-header {
+  display: flex;
+  width: 60px; }
+
+.navegador {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-left: 8%;
+  width: 74%;
+  cursor: pointer;
+  list-style-position: outside; }
+
+.navbar-nav .nav-link {
+  transition: all 0 ease-in-out;
+  color: #333333;
+  font-size: 20px; }
+  .navbar-nav .nav-link:hover {
+    color: red; }
+
+/*La seccion que contrendra toda la informacion mas importante de la pagina*/
+.menuPrincipal {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  width: 77%;
+  margin: auto;
+  background-color: #c3d27c; }
+  @media all and (max-width: 768px) {
+    .menuPrincipal {
+      width: 100%;
+      text-align: center;
+      padding-top: 10%; } }
+
+/*Nuestro fondo de pagina. Le asignamos una imagen y cuando esta ya no se vea porque el menuPrincipal la tape, la quitamos*/
+.fondo {
+  width: 100%;
+  background-image: url(../media/fondoMacetas.png);
+  background-color: #f7efe5;
+  overflow: hidden; }
+  @media all and (max-width: 768px) {
+    .fondo {
+      background-image: none; } }
+
+.menuPrincipal2 {
+  width: 30%;
+  margin: auto; }
+
+/*El titulo de cada seccion, ya sea tipos productos etc*/
+#tituloParrafo {
+  text-align: center; }
+  #tituloParrafo h2 {
+    padding: 1%;
+    font-weight: 700; }
+
+/*Le damos ciertas caracteristicas en comun a la seccion de grillas de tipos y productos*/
+.grilla__img {
+  transition-duration: 0.3s;
+  padding-top: 2%; 
+ }
+
+.subBloques {
+  padding-top: 1rem; }
+
+.subBloques__subtitulos {
+  padding-top: 6%;
+  text-align: center;
+  width: 20%;
+  margin: auto;
+  font-family: "Merienda", sans-serif;
+  color: #414b19;
+  border-bottom: 0.2rem double green; }
+
+/*definimos nuestra pagina de tipos, con sus respectivos responsive*/
+@media all and (max-width: 768px) {
+  #tipos .subBloques__subtitulos {
+    width: 40%;
+    text-align: center; } }
+
+#tipos .grilla__img:hover {
+  transform: scale(106.5%); }
+
+#tipos .subBloques__parrafos .subBloques__grilla {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 24rem;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); }
+
+#tipos .subBloques__parrafos .grilla__bloques {
+  border: 1px solid #010101;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #f7efe5; }
+
+#tipos .subBloques__parrafos .tipos__nombres {
+  width: 50%;
+  margin: auto;
+  text-align: center; }
+  @media all and (max-width: 768px) {
+    #tipos .subBloques__parrafos .tipos__nombres {
+      width: 80%; } }
+
+#tipos .subBloques__parrafos .btn-check:focus + .btn, #tipos .subBloques__parrafos .btn:focus {
+  box-shadow: none; }
+
+#tipos .subBloques__parrafos .modal-content {
+  height: 100%;
+  width: 45rem; }
+  @media all and (max-width: 768px) {
+    #tipos .subBloques__parrafos .modal-content {
+      width: 24rem; } }
+
+#tipos .subBloques__parrafos img {
+  width: 22.5rem;
+  margin: auto;
+  display: flex; }
+
+/*En nuestra pagina de productos, aqui definimos la segunda parte donde se encuentran las macetas y los cactus*/
+
+
+#productos h2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.bloque_cards{
+  border: 1px solid #010101;
+    box-shadow: 10px 10px 5px 0px rgb(0 0 0 / 75%);
+    background-color: #f7efe5;
+  
+}
+#productos .subBloques__subtitulos {
+  text-align: center; }
+  @media all and (max-width: 768px) {
+    #productos .subBloques__subtitulos {
+      width: 40%; } }
+
+#productos .tituloParrafo {
+  text-align: center; }
+  #productos .tituloParrafo h2 {
+    font-weight: 700; }
+
+#productos .carrou {
+  width: 50%;
+  margin: auto; }
+  @media all and (max-width: 768px) {
+    #productos .carrou {
+      width: 75%; } }
+
+#productos .carousel-control-prev-icon, #productos .carousel-control-next-icon {
+  background-color: #798076; }
+
+/*Aqui damos estilo a la seccion de suculentas de la pagina productos*/
+#producto .subBloques__subtitulos {
+  text-align: center; }
+  @media all and (max-width: 768px) {
+    #producto .subBloques__subtitulos {
+      width: 40%; } }
+
+#producto #tituloParrafo {
+  text-align: center; }
+
+#producto .subBloques__grilla {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 35rem;
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr)); }
+
+#producto .grilla__bloques {
+  border: 1px solid #010101;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #f7efe5; }
+
+#producto .tipos__nombres {
+  width: 50%;
+  margin: auto;
+  text-align: center; }
+  @media all and (max-width: 768px) {
+    #producto .tipos__nombres {
+      width: 80%; } }
+
+#producto .btn-check:focus + .btn, #producto .btn:focus {
+  box-shadow: none; }
+
+#producto .modal-content {
+  height: 100%;
+  width: 45rem; }
+  @media all and (max-width: 768px) {
+    #producto .modal-content {
+      width: 24rem; } }
+  #producto .modal-content .modal-footer p {
+    text-align: center;
+    width: 80%; }
+    @media all and (max-width: 768px) {
+      #producto .modal-content .modal-footer p {
+        width: 50%; } }
+
+#producto img {
+  width: 80%;
+  margin: auto;
+  display: flex; }
+ 
+#producto .grilla__img:hover {
+  transform: scale(104%); }
+
+/*Definimos la pagina de tips*/
+#tips .subBloques__parrafos {
+  width: 97%;
+  margin: auto; }
+  #tips .subBloques__parrafos h2 {
+    padding-top: 1%;
+    margin: auto;
+    text-align: center;
+    color: #171d2d; }
+  #tips .subBloques__parrafos .parrafos__subtitulos {
+    display: flex;
+    width: 88%;
+    justify-content: flex-start;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    padding-left: 5%;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Merienda", sans-serif; }
+    @media all and (max-width: 768px) {
+      #tips .subBloques__parrafos .parrafos__subtitulos {
+        width: 100%;
+        justify-content: center;
+        padding-top: 3%; } }
+  #tips .subBloques__parrafos .parrafos__subtitulos2 {
+    justify-content: flex-end;
+    width: 90%; }
+    @media all and (max-width: 768px) {
+      #tips .subBloques__parrafos .parrafos__subtitulos2 {
+        width: 100%;
+        justify-content: center;
+        padding-top: 3%; } }
+  #tips .subBloques__parrafos .parrafos__texto {
+    width: 75%;
+    margin-left: 2rem;
+    text-align: start; }
+    @media all and (max-width: 768px) {
+      #tips .subBloques__parrafos .parrafos__texto {
+        width: 90%;
+        margin-left: 1rem; } }
+  #tips .subBloques__parrafos .parrafos__texto2 {
+    text-align: start;
+    margin-left: 12rem; }
+    @media all and (max-width: 768px) {
+      #tips .subBloques__parrafos .parrafos__texto2 {
+        width: 90%;
+        margin-left: 1rem; } }
+  #tips .subBloques__parrafos .containerP {
+    border-left: 10px double #a9ba5a;
+    border-bottom: 6px dashed #a9ba5a; }
+  #tips .subBloques__parrafos .containerP2 {
+    border-right: 10px double #a9ba5a;
+    border-bottom: 6px dashed #a9ba5a; }
+
+/*Le damos estilo a la pagina de contacto, ya sea el formulario como el iframe que representa el mapa de nuestro local*/
+@media all and (max-width: 768px) {
+  #contactanos .subBloques__subtitulos {
+    width: 50%;
+    text-align: center; } }
+
+@media all and (max-width: 768px) {
+  #contactanos .bloqueContacto {
+    flex-direction: column;
+    align-items: flex-start; } }
+
+#contactanos .mapa {
+  display: flex;
+  width: 100%;
+  justify-content: center; }
+  #contactanos .mapa iframe {
+    width: 40rem;
+    height: 30rem; }
+    @media all and (max-width: 840px) {
+      #contactanos .mapa iframe {
+        width: 30rem;
+        height: 22.5rem; } }
+    @media all and (max-width: 500px) {
+      #contactanos .mapa iframe {
+        width: 19rem;
+        height: 14.25rem; } }
+
+#contactanos .formulario {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+  #contactanos .formulario .form-control:focus {
+    box-shadow: inset 2px 2px 2px 2px #a9ba5a;
+    outline: none;
+    border-color: #a9ba5a; }
+  #contactanos .formulario .modal-content {
+    width: 40rem;
+    margin: auto; }
+    @media all and (max-width: 768px) {
+      #contactanos .formulario .modal-content {
+        width: 24rem; } }
+  #contactanos .formulario label {
+    font-family: "Merienda", sans-serif;
+    font-size: 20px;
+    padding-top: 1rem; }
+  #contactanos .formulario .places {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700; }
+  #contactanos .formulario textarea {
+    resize: none; }
+  #contactanos .formulario .consulta__boton {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1rem; }
+
+/*Definimos el footer de nuestras paginas*/
+.foot {
+  display: flex;
+  background-color: #7c797a;
+  height: 4rem;
+  justify-content: center;
+  overflow: hidden; }
+  .foot p {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 1rem; }
+  .foot .redes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%; }
+    .foot .redes img {
+      width: 4rem; }
+    .foot .redes .face {
+      width: 4.4rem; }
+    @media all and (max-width: 768px) {
+      .foot .redes {
+        width: 60%; } }
+    @media all and (max-width: 550px) {
+      .foot .redes {
+        width: 80%; } }
+
+/*removemos la posible decoracion de nuestros links*/
+a {
+  text-decoration: none; }

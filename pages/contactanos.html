@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contactanos</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+	<!-- cdn de bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<!-- este script debe ir en la parte de abajo -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<!-- link del icono de la pestaña-->
+	<link rel="shortcut icon" href="../media/logoIcono.ico" />
+
+	<meta name="description" content="No dudes en consultar cualquier duda que tengas sobre nosotros y nuestros productos!">
+</head>
+<body>
+<!-- Header de la pagina, con sus respectivos navs -->
+<header>
+	<div class="loguito">
+		<a href="../index.html">
+			<img class="logo logo-header" src="../media/logo.png" alt="logo">
+		</a>
+	</div>	
+		<nav class="navbar navbar-light navbar-expand-lg  text-dark  w-100 m-auto">
+			<div class="container-fluid">
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navegador navbar-nav">
+				  <li class="nav-item">
+					<a class="button button3" aria-current="page" href="tipos.html">Tipos</a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="button button3 dropdown-toggle" href="productos.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					  Productos
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					  <li><a class="dropdown-item  bg-transparent text-dark" href="productos.html">Suculentas</a></li>
+					  <li><a class="dropdown-item  bg-transparent text-dark" href="productos.html#carouselExampleCaptions">Macetas</a></li>
+					  <li><a class="dropdown-item  bg-transparent text-dark" href="productos.html#carouselExampleCaptions2">Cactus</a></li>
+					  
+					</ul>
+				  </li>
+				  <li class="nav-item">
+					<a class="button button3" href="tips.html">Tips</a>
+				  </li>
+				 
+				  <li class="nav-item">
+					<a class="button button3" href="contactanos.html">Contactanos</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+		  <div id="carrito">
+			<img src="../media/carrito.png" alt="carrito de compras">
+		  </div>
+	</header>
+		<!-- bloque para establecer el fondo-->
+	<div class="fondo">
+		<!-- bloque que contiene toda la informacion principal del sitio -->
+		<div class="menuPrincipal">
+			<div class="subBloques" id="contactanos">
+				<h1 class="subBloques__subtitulos" >CONTACTANOS</h1>
+				<!-- bloque interior de parrafos y demas-->
+				<div class="subBloques__parrafos">
+						<!-- bloque para dejar el formulario de contacto y el mapa donde se encuentra el local-->
+						<div class="bloqueContacto">					
+							<div class="formulario">	
+								<form>
+									<div class="row">
+									    <div class="col">
+									    	<label for="">Nombre</label>
+									      <input  type="text" class="form-control places ingresos" >
+									    </div>
+									    <div class="col">
+									    	<label for="">Apellido</label>
+									      <input type="text" class="form-control places ingresos" >
+									    </div>
+									</div>
+								  <div class="form-group">
+								    <label for="exampleFormControlInput1">Mail de contacto</label>
+								    <input type="email" class="form-control places" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+								  </div>
+								  <div class="form-group">
+								    <label  for="exampleFormControlSelect1">Que desea consultar</label>
+								    <select class="form-control places" id="exampleFormControlSelect1">
+								      <option class="places bg-transparent">-</option>
+								      <option class="places">Suculenta</option>
+								      <option class="places">Maceta</option>
+								      <option class="places">Cactus</option>
+								      <option class="places">Otra</option>
+								    </select>
+								  </div>
+								  <div class="form-group">
+								    <label for="exampleFormControlTextarea1">Cual es su consulta</label>
+								    <textarea class="form-control places" id="exampleFormControlTextarea1" rows="3" placeholder="Dudas sobre el precio, disponibilidad o tamaño de nuestros productos!"></textarea>
+								  </div>
+								<div class="consulta__boton">
+									<button type="button" id="Enviar" class="button button2" data-backdrop="false" data-dismiss="#envioContacto" data-toggle="modal" data-target="#envioContacto" >
+										Enviar
+									</button>
+									<div class="modal fade" id="envioContacto" tabindex="-1"  aria-hidden="true">
+									  <div class="modal-dialog">
+									    <div class="modal-content">						
+									      <div class="modal-body">
+									        Muchas gracias por contactarse! Vamos a responder su consulta a la brevedad :)
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="button button2 buttonClose" data-dismiss="modal">Cerrar</button>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+									<input class=" button button2 buttonClose" type="reset"  name="reset" value="Borrar ">	
+								</div>
+								</form>
+							</div>
+							<div class="mapa">								
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1900.0476895136574!2d-59.8729751818646!3d-36.78288241011887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9594270cb473174b%3A0x2f7ccb12e36c6a9c!2sAzul%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1626134187841!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Seccion del footer -->
+<footer class="foot">
+	<div class="redes" >
+		<a href="https://www.instagram.com/leomessi/" target="_blank">
+			<img src="../media/IgLetra.png" alt="instagram">
+		</a>	
+		<p>aloja gajitos</p>
+		<a  href="https://www.facebook.com/" target="_blank">
+			<img class="face" src="../media/faceLetra.png" alt="Faceebook">
+		</a>
+	</div>
+
+</footer>
+
+<!-- Lista de scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+</script>
+<script src="../js/appContacto.js" ></script>
+</body>
+</html>
